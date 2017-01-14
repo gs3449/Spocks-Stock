@@ -16,7 +16,7 @@ prices = []
 
 def get_data(nke.csv):
 	with open(nke.csv, 'r') as csvfile:
-		csvFileReader = csv.reader(csvfile)
+		csvFileReader = csv.reader(nke.csv)
 		next(csvFileReader)	# skipping column names
 		for row in csvFileReader:
 			dates.append(int(row[0].split('-')[0]))
